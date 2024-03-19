@@ -14,6 +14,29 @@ let isError = false;
 //Function to clean the string value and ensure you have a value
 // The split() method splits a string into an array of substrings and returns the new array
 
+/*
 function cleanInputString(str) {
+    const strArray = str.split('');
+    const cleanStrArray = []; //for storing valid number characters
+    // A for loop to itterate through each character in your strArray array
+    //The .includes() method returns true if the array contains the character,
+    //and false if not.
+    //The logical NOT operator (!) will return the opposite of the value of the .includes() method. 
+    //Regular expressions are patterns used to match character combinations in strings.In js they are also objects 
+    for (let i = 0; i < strArray.length; i++){
+        if(!["+", "-", " "].includes(strArray[i])) {
+            strArray.push(strArray[i]);
+        }
 
-}
+    }
+
+} 
+*/
+
+ // Removed the existing code within the cleanInputString function and replaced it with the following.
+ // whitespace refers to characters which are used to provide horizontal or vertical space between other charecters.
+ //Flag is a special variable that can only take two values: true and false
+ function cleanInputString(str) {
+  const regex = /[\+-\s]/g; //You want to look for plus and minus characters...Using the \ to escape the +, because it has a special meaning in regular expression.
+  //To tell the pattern to match each of above characters individually, you wrap them in brackets to turn them into character class
+ }
